@@ -7,7 +7,7 @@ myWindow = window.open("", "myWindow", "width=300,height=100");
 makeButton();
 
 function makeButton() {
-    if(myWindow.document.getElementById("myText") == NULL) {
+    if(myWindow.document.getElementById("myText") == null) {
 	myWindow.document.write("<input type=\"text\" id=\"myText\" placeholder=\"thing that is gone\"><button id=\"myButton\" onclick=\"opener.changeText()\">delet</button>");
 	
 	myWindow.document.getElementById("myText").addEventListener("keyup", function(event) {
