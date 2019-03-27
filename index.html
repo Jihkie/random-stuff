@@ -1,75 +1,52 @@
 <html>
-	<body>
-		<table>
-			<tr>
-				<td>
-					<input type="checkbox"> Pick up an item of each rarity<br>
-				</td>
-				<td>
-					<input type="checkbox"> Dance in different forbidden locations<br>
-				</td>
-				<td>
-					<input type="checkbox"> Play 5 matches with at least one elimination <br>
-				</td>
-				<td>
-					<input type="checkbox"> Dance on top of a crown of RV's -> Metal Turtle -> Submarine<br>
-				</td>
-				<td>
-					<input type="checkbox"> Deal 500 Headshot Damage to opponents<br>
-				</td>
-				<td>
-					<input type="checkbox"> Search 5 Ammo Boxes in a single match -> 3 chests -> 1 supply drop<br>
-				</td>
-				<td>
-					<input type="checkbox"> Eliminate opponents in 5 different Named Locations<br>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="checkbox"> Search a Chest in 7 different Named Locations<br>
-				</td>
-				<td>
-					<input type="checkbox"> Damage opponents with 5 different types of weapons<br>
-				</td>
-				<td>
-					<input type="checkbox"> Eliminate 3 opponents in Snobby Shores or Fatal Fields<br>
-				</td>
-				<td>
-					<input type="checkbox"> Stage 1: Visit Snobby Shores and Pleasant Park in a single match<br> Lonely Lodge and Dusty Divot<br> Tomato Temple and Frosty Flights<br>
-				</td>
-				<td>
-					<input type="checkbox"> Play the Sheet Music on pianos near Pleasant Park and Lonely Lodge<br>
-				</td>
-				<td>
-					<input type="checkbox"> Compete in a Dance Off at an abandoned mansion<br>
-				</td>
-				<td>
-					<input type="checkbox"> Eliminate an opponent from at least 50m away<br>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="checkbox"> <br>
-				</td>
-				<td>
-					<input type="checkbox"> <br>
-				</td>
-				<td>
-					<input type="checkbox"> <br>
-				</td>
-				<td>
-					<input type="checkbox"> <br>
-				</td>
-				<td>
-					<input type="checkbox"> <br>
-				</td>
-				<td>
-					<input type="checkbox"> <br>
-				</td>
-				<td>
-					<input type="checkbox"> <br>
-				</td>
-			</tr>
-		</table>
-	</body>
-</html>
+<head>
+<script>
+var myWindow;
+myWindow = window.open("", "myWindow", "width=300,height=100");
+//subjList.forEach(makeButton);
+makeButton();
+
+function makeButton() {
+    myWindow.document.write("<input type=\"text\" id=\"myText\" placeholder=\"thing that is gone\"><button onclick=\"opener.changeText()\">delet</button>");
+}
+
+function changeText() {
+    var crabText = myWindow.opener.document.getElementById("crabText");
+  	var name = myWindow.document.getElementById("myText").value;
+    crabText.innerText = name.toUpperCase() + " IS GONE";
+}
+
+</script>
+</head>
+<body style="
+    background-image: url(https://media1.tenor.com/images/ad95bfe3acf9d4be4dd9b53a8d56f265/tenor.gif?itemid=13276214);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+">
+    <div style="
+    position: absolute;
+    /* left: 339px; */
+    /* top: 368px; */
+    /* margin: auto; */
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+">
+    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/180/crab_1f980.png" style="
+    /* display: inline; */
+    padding-right: 50px;
+">
+        <p style="
+    font-size: 104px;
+    font-weight: 900;
+    display: inline;
+" id="crabText">THING IS GONE</p>
+    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/180/crab_1f980.png" style="
+    padding-left: 50px;
+">
+    </div>
+</body></html>
