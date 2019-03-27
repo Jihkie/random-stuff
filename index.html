@@ -9,14 +9,14 @@ makeButton();
 function makeButton() {
     if(myWindow.document.getElementById("myText") == null) {
 	myWindow.document.write("<input type=\"text\" id=\"myText\" placeholder=\"thing that is gone\"><button id=\"myButton\" onclick=\"opener.changeText()\">delet</button>");
-	
-	myWindow.document.getElementById("myText").addEventListener("keyup", function(event) {
-		event.preventDefault();
-		if (event.keyCode === 13) {
-			myWindow.document.getElementById("myButton").click();
-		}
-	});
     }
+    myWindow.document.getElementById("myText").addEventListener("keyup", function(event) {
+	event.preventDefault();
+	if (event.keyCode === 13) {
+		myWindow.document.getElementById("myButton").click();
+	}
+    });
+    
 }
 
 function changeText() {
